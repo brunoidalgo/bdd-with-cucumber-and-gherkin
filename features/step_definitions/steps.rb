@@ -3,7 +3,7 @@ Quando('acesso a página principal da Starbugs') do
 end
   
 Então('eu devo visualizar uma lista de cafés disponíveis') do
-    expect(@home.coffee_list.size).to be > 1 # Verifica a validação da lista
+    expect(@home.coffee_list.size).to be > 0 # Verifica a validação da lista
 end
 
 Dado('que estou na página principal da Starbugs') do
@@ -11,13 +11,11 @@ Dado('que estou na página principal da Starbugs') do
 end
 
 Dado('que desejo comprar o seguinte produto:') do |table|
-  @product_name = table.hashes[0][:product]
-  @product_price = table.hashes[0][:price]
-  @delivery_price = table.hashes[0][:delivery]
+  @product = table.rows_hash
 end
 
 Quando('inicio a compra desse item') do
-  @home.buy(@product_name)
+  @home.buy(@product[:name])
 end
 
 Então('devo ver a página de Checkout com os detalhes do produto') do

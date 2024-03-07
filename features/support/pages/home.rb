@@ -1,3 +1,5 @@
+require 'rspec'
+
 class HomePage # Classe que defini nesse caso a página inicial do projeto a ser testado
   include Capybara::DSL 
   # Com essa linha temos uma correta demonstração de para onde o arquivo de execução deve olhar
