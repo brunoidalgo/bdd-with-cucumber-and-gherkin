@@ -14,25 +14,28 @@ Cenário: Acessar o catálogo de cafés na página principal
     Então eu devo visualizar uma lista de cafés disponíveis
 
 # @temp serve para utilizarmos a flag -t @temp na execução dos testes e só executar o cenário aonde existe o @temp    
-@temp
+
+
 Cenário: Iniciar a compra de um café
 
     Dado que estou na página principal da Starbugs
         E que desejo comprar o seguinte produto:
-        | name     | Expresso Gelado |    
+        | name        | Expresso Gelado |    
         | price       | R$ 9,99         |
         | delivery    | R$ 10,00        |
         # Muito importante a definição de qual tipo de dado está sendo inserido no teste, nesse caso (String)
     Quando inicio a compra desse item
     Então devo ver a página de Checkout com os detalhes do produto
         E o valor total da compra deve ser de "R$ 19,99"
+
 # Dado, Quando e E, são três palavras reservardas do Gherkin para a escrita de casos de teste
 # Sempre escrever os casos de teste pensando em usabilidade
 
-
+@temp
 Cenário: Café indisponível
 
     Dado que estou na página principal da Starbugs
-        E que desejo comprar o café "Expresso Cremoso"
+        E que desejo comprar o seguinte produto:
+        | name        | Expresso Cremoso |    
     Quando inicio a compra desse item
     Então devo ver um popup informando que o produto está indisponível

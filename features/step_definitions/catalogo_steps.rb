@@ -14,6 +14,10 @@ Dado('que desejo comprar o seguinte produto:') do |table|
   @product = table.rows_hash
 end
 
+Dado('que desejo comprar o café {string}') do |string|
+  @home.buy(@product[:name])
+end
+
 Quando('inicio a compra desse item') do
   @home.buy(@product[:name])
 end
@@ -29,7 +33,6 @@ end
 Então('devo ver um popup informando que o produto está indisponível') do
   @popup.have_text('Produto indisponível')
 end
-
 
 
 # Então, do, end são as steps em ruby
