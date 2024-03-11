@@ -5,7 +5,7 @@ class HomePage # Classe que defini nesse caso a página inicial do projeto a ser
   # Com essa linha temos uma correta demonstração de para onde o arquivo de execução deve olhar
 
   def open # "Função" definida utilizando o comando def
-    visit 'https://starbugs.vercel.app/' # Tem a função de visistar a página inicial do projeto
+    visit 'https://starbugs-qa.vercel.app/' # Tem a função de visistar a página inicial do projeto
   end
 
   def coffee_list

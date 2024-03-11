@@ -31,7 +31,6 @@ Cenário: Iniciar a compra de um café
 # Dado, Quando e E, são três palavras reservardas do Gherkin para a escrita de casos de teste
 # Sempre escrever os casos de teste pensando em usabilidade
 
-@temp
 Cenário: Café indisponível
 
     Dado que estou na página principal da Starbugs
