@@ -30,4 +30,17 @@ Funcionalidade: Uso de cupons no Checkout
     Então devo ver a seguinte notificação "Cupom inválido!"
         E o valor final deve permancecer o mesmo "R$ 29,99"
 
+
+    # Esquema do Cenário: Tentativa de aplicar o desconto
+
+    # Quando aplico o seguinte cupom: "<cupom>"
+    # Então devo ver a seguinte notificação "<saida>"
+    #     E o valor final deve permancecer o mesmo "R$ 29,99"
+
+
+    # Exemplos:
+    # |cupom    |saida|
+    # |PROMO 20 | Cupom Expirado|
+    # |PROMO 100| Cupom inválido|
+
 # BDD - Desenvolver guiado a comportamento

@@ -11,3 +11,12 @@ Before do
   @order = OrderPage.new
 
 end
+
+After do |scenario|
+
+  if(scenario.failed?) then
+    screenshot = page.save_screenshot("logs/screenshots/#{scenario.__id__}.png")
+    attach(screenshot, 'image/png', 'Screenshot')
+  end
+  # Caso o scenario falhar o cucumber irá tirar um print e armazenar em: logs/screenshots/temp.png
+end
