@@ -17,8 +17,8 @@ class CheckoutPage
   end
 
   def assert_total_price(total_price)
-    price = find('.total-price') # Localiza o preço total do produto
-    expect(price.text).to eql total_price # Verifica se price_total é igual ao esperado
+    price = find('.total-price').text # Localiza o preço total do produto
+    expect(price).to eql total_price # Verifica se price_total é igual ao esperado
   end
 
   def find_zipcode(zipcode)
@@ -46,6 +46,7 @@ class CheckoutPage
 
   def assert_notice(text)
     notice = find('.notice').text
-    expect(notice.text).to eql text
+    expect(notice).to eql text
   end
+
 end
